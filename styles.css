@@ -1,3 +1,6 @@
+:root {
+    --image-rounding: 200px;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -37,29 +40,65 @@ nav ul li {
 
 nav ul li a {
     color: #333;
+    font-size: large;
+    font-weight: bold;
     padding: 10px;
     text-decoration: none;
     transition: 0.1s ease-in-out;
 }
 
 nav ul li a:hover{
-    color: #474747;
+    color: #777;
     text-decoration: none;
-    border-bottom: 1px solid #222;
+    /* border-bottom: 1px solid #777; */
 }
 
 section {
     overflow: hidden;
     font-size: large;
-    padding: 50px;
+    padding: 200px 0px 0px 0px;
+    /* margin: 100px 0px 100px 0px; */
     color: #333;
     height: fit-content;
     min-height: 200px;
 }
 
+section.left .test{
+    border-top-left-radius: var(--image-rounding);
+    border-bottom-left-radius: var(--image-rounding);
+    transition: 200ms ease-in-out;
+}
+
+section.right .test{
+    border-top-right-radius: var(--image-rounding);
+    border-bottom-right-radius: var(--image-rounding);
+    transition: 200ms ease-in-out;
+}
+
+section.right .test:hover{
+    border-top-right-radius: calc(var(--image-rounding) + 50px);
+    border-bottom-right-radius: calc(var(--image-rounding) + 50px);
+    margin: 0px -50px 0px 50px;
+}
+
+section.left .test:hover{
+    border-top-left-radius: calc(var(--image-rounding) + 50px);
+    border-bottom-left-radius: calc(var(--image-rounding) + 50px);
+    margin: 0px 50px 0px -50px;
+}
+
+section .test{
+    width: 100%;
+}
+
+#test3{
+    margin-bottom: 200px;
+}
+
 section .one{
     float: left;
-    width: 70%;
+    width: calc(70% - 100px);
+    padding: 50px;
 
 }
 section .two{
@@ -67,18 +106,25 @@ section .two{
     width: 30%;
 }
 
-section h2{
-    font-size: 2em;
-    width: fit-content;
+section.right .two{
+    margin: 0px 50px 0px -50px;
 }
-section .test{
-    width: 100%;
+section.left .two{
+    margin: 0px -50px 0px 50px;
+}
+
+section h2{
+    font-size: 3em;
+    width: auto;
+}
+section p, h2{
+    text-align: center;
 }
 
 footer {
     clear: both;
-    background-color: #333;
-    color: #fff;
+    background-color: #333333;
+    color: #fffbef;
     text-align: center;
     padding: 20px;
 }
