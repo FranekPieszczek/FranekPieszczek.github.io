@@ -7,6 +7,8 @@ body {
 }
 
 header {
+    position: fixed;
+    width: calc(100% - 40px);
     background-color: #fffbef;
     color: #333;
     padding: 0px 20px 0px 20px;
@@ -17,7 +19,6 @@ header {
 header h1 {
     text-align: left;
     cursor: default;
-
     margin: 20px 0 20px 10px;
     padding-top: 0;
     height: 40px;
