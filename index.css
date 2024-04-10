@@ -53,6 +53,7 @@ section .one{
 
 section .two{
     float: left;
+    height: 100%;
     width: 30%;
 }
 

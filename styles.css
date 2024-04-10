@@ -6,23 +6,32 @@ body {
     color:#333;
 }
 
-@media screen and (max-width: 960px){
+@media screen and (max-width: 950px){
+    header{
+        display: grid;
+        place-items: center;
+    }
     header .logo-title{
-        width: fit-content;
+        width: 330px;
         height: fit-content;
-        /* clear: both; */
+        text-align: center;
         margin: 0 auto;
     }
 
     header .main-nav{
         height: 40px;
         font-size: large;
-        margin: 20px auto;
+        width: 100%;
+        margin: 10px auto 10px auto;
     }
+    /* header .secondary-nav{
+        margin: 178px auto 8px auto;
+    } */
 }
 
 .logo-title{
     float: left;
+    margin-bottom: 10px;
 }
 
 .header-fixed {
@@ -55,7 +64,7 @@ body {
 header h1 {
     text-align: left;
     cursor: default;
-    margin: 20px 0 20px 10px;
+    margin: 30px 0 10px 10px;
     padding-top: 0;
     height: 40px;
     width: fit-content;
@@ -69,6 +78,7 @@ header #logo{
 
 header hr{
     clear: both;
+    width: 100%;
 }
 
 header .main-nav, header .secondary-nav {
@@ -78,12 +88,14 @@ header .main-nav, header .secondary-nav {
     font-size: large;
 }
 
-header .main-nav{
-    margin: 20px auto;
-}
-
-header .secondary-nav{
-    margin: 98px auto 8px auto;
+@media screen and (min-width: 951px){
+    header .main-nav{
+        margin: 25px auto 25px auto;
+    }
+    
+    header .secondary-nav{
+        margin: 98px auto 8px auto;
+    }
 }
 
 .main-nav ul, .secondary-nav ul{
@@ -91,6 +103,7 @@ header .secondary-nav{
     align-items: center;
     justify-content: center;
     list-style-type: none;
+    padding: 0px;
     height: 100%;
     width: fit-content;
     margin: auto;
@@ -100,6 +113,7 @@ header .secondary-nav{
 nav ul li {
     display: inline;
     height: fit-content;
+    text-align: center;
     margin: 0 0px 0 10px;
     
 }
@@ -107,13 +121,15 @@ nav ul li {
 .secondary-nav ul li a, .main-nav ul li a{
     color: #333;
     font-weight: lighter;
+    max-height: fit-content;
     padding: 10px;
+    white-space: nowrap;
     text-decoration: none;
     transition: 0.1s ease-in-out;
 }
 
 .main-nav ul li a{
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .secondary-nav ul li a{
