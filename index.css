@@ -5,6 +5,7 @@
 section {
     overflow: hidden;
     font-size: large;
+    display: flex;
     padding: 200px 0px 0px 0px;
     /* margin: 100px 0px 100px 0px; */
     color: #333;
@@ -45,16 +46,19 @@ section .test{
 }
 
 section .one{
-    float: left;
-    width: calc(70% - 100px);
+    box-sizing: border-box;
+    flex: 1.618;
+    /* float: left;
+    width: 70%; */
     padding: 50px;
 
 }
 
 section .two{
-    float: left;
+    /* float: left;
+    width: 30%; */
+    flex: 1;
     height: 100%;
-    width: 30%;
 }
 
 section.right .two{
