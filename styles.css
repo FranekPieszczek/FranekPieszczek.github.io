@@ -89,6 +89,9 @@ header .main-nav, header .secondary-nav {
 }
 
 @media screen and (min-width: 951px){
+    /* section{
+
+    } */
     header .main-nav{
         margin: 25px auto 25px auto;
     }
