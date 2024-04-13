@@ -2,6 +2,91 @@
     --image-rounding: 200px;
 }
 
+@media screen and (max-width: 800px){
+    section{
+        flex-wrap: wrap;
+    }
+    section .one{
+        box-sizing: border-box;
+        /* flex: 1.618; */
+        padding: 50px;
+        order: 2;
+        width: 100vw;
+        height: calc(100% / 1.618);
+    }
+    
+    section .two{
+        order: 1;
+        width: 100vw;
+        /* flex: 1; */
+        height: calc(100% - (100% / 1.618));
+    }
+}
+
+@media screen and (min-width: 801px){
+    section .one{
+        box-sizing: border-box;
+        flex: 1.618;
+        /* float: left;
+        width: 70%; */
+        padding: 50px;
+    
+    }
+    
+    section .two{
+        /* float: left;
+        width: 30%; */
+        flex: 1;
+        height: 100%;
+        /* overflow: hidden; */
+    }
+
+    section.left .test{
+        border-top-left-radius: var(--image-rounding);
+        border-bottom-left-radius: var(--image-rounding);
+        transition: 200ms ease-in-out;
+    }
+    
+    section.right .test{
+        border-top-right-radius: var(--image-rounding);
+        border-bottom-right-radius: var(--image-rounding);
+        transition: 200ms ease-in-out;
+    }
+    
+    section.right .test:hover{
+        /* border-top-right-radius: calc(var(--image-rounding) + 50px);
+        border-bottom-right-radius: calc(var(--image-rounding) + 50px); */
+        margin: 0px -50px 0px 50px;
+    }
+    
+    section.left .test:hover{
+        /* border-top-left-radius: calc(var(--image-rounding) + 50px);
+        border-bottom-left-radius: calc(var(--image-rounding) + 50px); */
+        margin: 0px 50px 0px -50px;
+    }
+    
+    section.right .two{
+        margin: 0px 50px 0px -50px;
+    }
+    
+    section.left .two{
+        margin: 0px -50px 0px 50px;
+    }
+
+    
+}
+section h2{
+    /* 4em */
+    font-size: calc(2em + 1vw);
+    width: auto;
+}
+
+section p{
+    /* 1.25em */
+    font-size: calc(0.5em + 1vw);
+    padding: 20px;
+}
+
 section {
     overflow: hidden;
     font-size: large;
@@ -15,30 +100,6 @@ section {
     min-height: 200px;
 }
 
-section.left .test{
-    border-top-left-radius: var(--image-rounding);
-    border-bottom-left-radius: var(--image-rounding);
-    transition: 200ms ease-in-out;
-}
-
-section.right .test{
-    border-top-right-radius: var(--image-rounding);
-    border-bottom-right-radius: var(--image-rounding);
-    transition: 200ms ease-in-out;
-}
-
-section.right .test:hover{
-    /* border-top-right-radius: calc(var(--image-rounding) + 50px);
-    border-bottom-right-radius: calc(var(--image-rounding) + 50px); */
-    margin: 0px -50px 0px 50px;
-}
-
-section.left .test:hover{
-    /* border-top-left-radius: calc(var(--image-rounding) + 50px);
-    border-bottom-left-radius: calc(var(--image-rounding) + 50px); */
-    margin: 0px 50px 0px -50px;
-}
-
 section .test{
     width: 100vw;
     max-width: 100%;
@@ -49,41 +110,6 @@ section .test{
 
 #test3{
     margin-bottom: 200px;
-}
-
-section .one{
-    box-sizing: border-box;
-    flex: 1.618;
-    /* float: left;
-    width: 70%; */
-    padding: 50px;
-
-}
-
-section .two{
-    /* float: left;
-    width: 30%; */
-    flex: 1;
-    height: 100%;
-    /* overflow: hidden; */
-}
-
-section.right .two{
-    margin: 0px 50px 0px -50px;
-}
-
-section.left .two{
-    margin: 0px -50px 0px 50px;
-}
-
-section h2{
-    font-size: 4em;
-    width: auto;
-}
-
-section p{
-    font-size: 1.25em;
-    padding: 20px;
 }
 
 section p, h2{

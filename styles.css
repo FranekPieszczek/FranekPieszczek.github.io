@@ -6,7 +6,20 @@ body {
     color:#333;
 }
 
-@media screen and (max-width: 950px){
+@media screen and (min-width: 1000px){
+    /* section{
+
+    } */
+    header .main-nav{
+        margin: 30px auto 30px auto;
+    }
+    
+    header .secondary-nav{
+        margin: 98px auto 8px auto;
+    }
+}
+
+@media screen and (max-width: 999px){
     header{
         display: grid;
         place-items: center;
@@ -86,19 +99,6 @@ header .main-nav, header .secondary-nav {
     float: right;
     height: 40px;
     font-size: large;
-}
-
-@media screen and (min-width: 951px){
-    /* section{
-
-    } */
-    header .main-nav{
-        margin: 25px auto 25px auto;
-    }
-    
-    header .secondary-nav{
-        margin: 98px auto 8px auto;
-    }
 }
 
 .main-nav ul, .secondary-nav ul{
