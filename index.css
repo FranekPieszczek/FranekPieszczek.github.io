@@ -3,9 +3,16 @@
 }
 
 @media screen and (max-width: 800px){
+    
     section{
         flex-wrap: wrap;
+        padding: 75px 0px 0px 0px;
     }
+    
+    #test1{
+        padding: 175px 0px 0px 0px;
+    }
+
     section .one{
         box-sizing: border-box;
         /* flex: 1.618; */
@@ -24,6 +31,9 @@
 }
 
 @media screen and (min-width: 801px){
+    section{
+        padding: 175px 0px 0px 0px;
+    }
     section .one{
         box-sizing: border-box;
         flex: 1.618;
@@ -88,12 +98,12 @@ section p{
 }
 
 section {
+    cursor: default;
     overflow: hidden;
     font-size: large;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 175px 0px 0px 0px;
     /* margin: 100px 0px 100px 0px; */
     color: #333;
     height: 75vh;
