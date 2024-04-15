@@ -9,9 +9,9 @@
         padding: 75px 0px 0px 0px;
     }
     
-    #test1{
+    /* #test1{
         padding: 175px 0px 0px 0px;
-    }
+    } */
 
     section .one{
         box-sizing: border-box;
@@ -32,7 +32,7 @@
 
 @media screen and (min-width: 801px){
     section{
-        padding: 175px 0px 0px 0px;
+        padding: 75px 0px 0px 0px;
     }
     section .one{
         box-sizing: border-box;

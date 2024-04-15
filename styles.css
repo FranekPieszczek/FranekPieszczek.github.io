@@ -8,6 +8,8 @@ body {
 
 .header-fixed {
     position: fixed;
+    top: 0;
+    left: 0;
     width: calc(100% - 40px);
     background-color: #fffbef;
     color: #333;
@@ -16,10 +18,43 @@ body {
     box-shadow: 0 0 50px -30px #4e3629; 
 }
 
+#heading-container{
+    background-color: #7B5741;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(110px * 1.618);
+}
+
+#heading-container h1{
+    /* padding: 10px 0 10px 0; */
+    margin: 0;
+    color: #fffbef;
+    /* padding: 65px 0 0px 0; */
+    text-align: center;
+    height: 58px;
+    font-size: 50px;
+    
+    /* border-top: 2px solid #4e3629;
+    border-bottom: 2px solid #4e3629; */
+}
+
 @media screen and (min-width: 1000px){
     /* section{
 
     } */
+
+    #heading-container{
+        margin-top: 110px;
+    }
+
+    .header-fixed{
+        height: 110px;
+    }
+
+    .header-fixed .logo-title #title{
+        font-size: 30px;
+    }
 
     header .logo-title{
         font-size: auto;
@@ -66,13 +101,22 @@ body {
         place-items: center;
     }
 
+    #heading-container{
+        margin-top: 138px;
+    }
+
+    .header-fixed{
+        height: 138px;
+    }
+
     header .logo-title #logo{
         height: 70px;
     }
 
-    header .logo-title h1{
+    header .logo-title #title{
         margin-left: 0px;
         margin-right: 15px;
+        font-size: 25px;
     }
 
     header .logo-title{
@@ -145,7 +189,7 @@ header .logo-title{
     color: #bfa387;
 } */
 
-header h1 {
+header #title {
     text-align: left;
     cursor: default;
     margin: 30px 0 10px 10px;
@@ -215,7 +259,7 @@ nav ul li a:hover{
 
 footer {
     clear: both;
-    background-color: #333333;
+    background-color: #7B5741;
     color: #fffbef;
     text-align: center;
     padding: 20px;
