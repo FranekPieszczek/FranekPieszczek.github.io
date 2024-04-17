@@ -23,7 +23,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: calc(110px * 1.618);
+    height: 40vh;
+    min-height: calc(110px * 1.618);
 }
 
 #heading-container h1{
