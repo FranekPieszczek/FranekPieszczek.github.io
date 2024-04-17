@@ -1,0 +1,22 @@
+.gallery{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column-start: auto;
+    grid-row-start: auto;
+    /* grid-auto-columns: max-content;
+    grid-auto-rows: max-content; */
+    /* grid-auto-rows: auto;
+    grid-auto-columns: auto; */
+    height: 500px;
+    width: calc(100vw - 100px);
+    border-radius: 20px;
+    padding: 30px;
+    margin: 175px 50px 50px 50px;
+    background-color: aqua;
+}
+
+.gallery .gallery-item{
+    height: 100px;
+    margin: 20px;
+}
