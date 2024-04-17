@@ -27,7 +27,7 @@ body {
     min-height: calc(110px * 1.618);
 }
 
-#heading-container h1{
+#heading{
     /* padding: 10px 0 10px 0; */
     margin: 0;
     color: #fffbef;
