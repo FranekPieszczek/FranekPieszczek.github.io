@@ -16,9 +16,11 @@
 }
 
 .gallery .gallery-item{
-    height: 150px;
+    min-height: 150px;
+    height: 100%;
     display: flex;
-    justify-content: center;;
+    justify-content: center;
+    align-items: center;
     /* margin: 20px; */
 }
 
@@ -26,10 +28,13 @@
     box-shadow: 0 0 50px -30px #4e3629; 
     height: 150px;
     transition: 50ms ease-in-out;
+    transform: scale(1);
 }
 
 .gallery .gallery-item img:hover{
     box-shadow: 0 0 75px -20px #4e3629; 
+    transform: scale(1.05);
+    /* height: 160px; */
 }
 
 h1{
