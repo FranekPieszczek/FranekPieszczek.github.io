@@ -40,9 +40,10 @@ body {
     color: #fffbef;
     /* padding: 65px 0 0px 0; */
     text-align: center;
+    text-wrap: nowrap;
     height: 58px;
     /* padding żeby w razie czego przyciemnić tło headera */
-    padding-top: 110px;
+    /* padding-top: 110px; */
     font-size: 50px;
     
     /* border-top: 2px solid #4e3629;
@@ -57,6 +58,11 @@ body {
     /* #heading-container{
         margin-top: 110px;
     } */
+
+    #heading{
+        /* padding żeby w razie czego przyciemnić tło headera */
+        padding-top: 110px;
+    }
 
     .header-fixed{
         height: 110px;
@@ -111,8 +117,13 @@ body {
         place-items: center;
     }
 
-    #heading-container{
+    /* #heading-container{
         margin-top: 138px;
+    } */
+
+    #heading{
+        /* padding żeby w razie czego przyciemnić tło headera */
+        padding-top: 138px;
     }
 
     .header-fixed{
@@ -216,6 +227,28 @@ header #logo{
 
 header hr{
     clear: both;
+    width: 100%;
+}
+
+.header-fixed .main-nav ul li .site-nav{
+    position: relative;
+    width: 0px;
+    height: 0px;
+    bottom: 0;
+    left: 0;
+    background-color: #09f4f0;
+
+}
+
+/* 
+####################################################################################################
+#todo: WHen you hover on the subpage name, the subnav rolls down and you can see the page's content#
+####################################################################################################
+*/
+
+.header-fixed .main-nav ul li:hover
+> .header-fixed .main-nav ul li .site-nav:hover{
+    height: 100px;
     width: 100%;
 }
 
