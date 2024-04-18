@@ -8,10 +8,12 @@ body {
 
 .header-fixed {
     position: fixed;
+    /* opacity: 50%; */
     top: 0;
     left: 0;
     width: calc(100% - 40px);
-    background-color: #fffbef;
+    /* background-color: #fffbef; */
+    background-color: rgba(255, 251, 239, 0.75);
     color: #333;
     padding: 0px 20px 0px 20px;
     user-select: none;
@@ -19,13 +21,17 @@ body {
 }
 
 #heading-container{
-    background-color: #7B5741;
+    background-color: #4e3629;
     display: flex;
     align-items: center;
     justify-content: center;
     height: 40vh;
     min-height: calc(110px * 1.618);
 }
+
+/* .logo-title *{
+    background-color: #fffbef;
+} */
 
 #heading{
     /* padding: 10px 0 10px 0; */
@@ -34,6 +40,8 @@ body {
     /* padding: 65px 0 0px 0; */
     text-align: center;
     height: 58px;
+    /* padding żeby w razie czego przyciemnić tło headera */
+    padding-top: 110px;
     font-size: 50px;
     
     /* border-top: 2px solid #4e3629;
@@ -45,9 +53,9 @@ body {
 
     } */
 
-    #heading-container{
+    /* #heading-container{
         margin-top: 110px;
-    }
+    } */
 
     .header-fixed{
         height: 110px;
@@ -260,7 +268,7 @@ nav ul li a:hover{
 
 footer {
     clear: both;
-    background-color: #7B5741;
+    background-color: #4e3629;
     color: #fffbef;
     text-align: center;
     padding: 20px;
