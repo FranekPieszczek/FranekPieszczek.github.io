@@ -8,10 +8,10 @@
     justify-content: center;
     min-height: 505px;
     height: fit-content;
-    width: calc(100vw - 100px);
+    width: calc(100vw - 200px);
     border-radius: 20px;
     padding: 50px;
-    margin: 75px 50px 50px 50px;
+    margin: 75px 100px 50px 100px;
     /* background-color: aqua; */
 }
 
