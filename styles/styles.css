@@ -11,6 +11,7 @@ body {
     /* opacity: 50%; */
     top: 0;
     left: 0;
+    z-index: 2;
     width: calc(100% - 40px);
     /* background-color: #fffbef; */
     background-color: rgba(255, 251, 239, 0.75);
