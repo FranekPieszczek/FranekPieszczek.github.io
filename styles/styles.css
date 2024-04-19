@@ -242,7 +242,8 @@ header hr{
     height: 0px;
     top: 100%;
     left: 15px;
-    background-color:#fffbef;
+    /* background-color:#fffbef; */
+    background-color: rgba(255, 251, 239, 0.9);
     transition: 50ms ease-in-out;
 }
 
@@ -323,7 +324,7 @@ nav ul li {
 .material-symbols-outlined{
     /* transform: rotate(90deg); */
     /* margin-top: 2px; */
-    height: 25px;
+    height: 23px;
     transition: 100ms ease-in-out;
 }
 
@@ -331,10 +332,10 @@ nav ul li {
 .header-fixed .main-nav > ul > li .nav-link:focus .material-symbols-outlined,
 .material-symbols-outlined:hover, 
 .material-symbols-outlined:focus,
-/* line below doesn't work, don't know how to fix it */
-.header-fixed .main-nav > ul > li .site-nav:hover .nav-link:has(+.site-nav)>.material-symbols-outlined{
+.nav-link:has(+.site-nav:hover) .material-symbols-outlined{
     transform: rotate(180deg);
 }
+
 
 .secondary-nav ul li .nav-link, .main-nav > ul > li .nav-link{
     color: #333;
