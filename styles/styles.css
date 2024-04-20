@@ -234,6 +234,12 @@ header hr{
     position: relative; /* Establish a positioning context */
 }
 
+/* 
+####################################################################################################
+#todo: WHen you hover on the subpage name, the subnav rolls down and you can see the page's content#
+####################################################################################################
+*/
+
 .header-fixed .main-nav ul  li .site-nav{
     position: absolute;
     visibility: hidden;
@@ -243,8 +249,21 @@ header hr{
     top: 100%;
     left: 15px;
     /* background-color:#fffbef; */
-    background-color: rgba(255, 251, 239, 0.9);
+    background-color: rgba(255, 251, 239, 0.97);
     transition: 50ms ease-in-out;
+}
+
+.header-fixed .main-nav > ul > li .nav-link:hover ~ .site-nav,
+.header-fixed .main-nav > ul > li .site-nav:hover{
+    position: absolute;
+    padding: 10px;
+    visibility: visible;
+    border: 2px solid #4e3629;
+    border-radius: 5px;
+    height: fit-content;
+    text-decoration: none;
+    min-height: 25px;
+    /* width: 100%; */
 }
 
 .site-nav .subnav{
@@ -268,24 +287,6 @@ header hr{
     text-decoration: none;
     color: #333;
     font-size: 15px;
-}
-
-/* 
-####################################################################################################
-#todo: WHen you hover on the subpage name, the subnav rolls down and you can see the page's content#
-####################################################################################################
-*/
-
-.header-fixed .main-nav > ul > li .nav-link:hover ~ .site-nav,
-.header-fixed .main-nav > ul > li .site-nav:hover{
-    position: absolute;
-    padding: 10px;
-    visibility: visible;
-    outline: 2px solid #4e3629;
-    height: fit-content;
-    text-decoration: none;
-    min-height: 25px;
-    /* width: 100%; */
 }
 
 /* .header-fixed .main-nav ul li a:hover,
@@ -367,7 +368,12 @@ nav ul li .nav-link:focus,
 footer {
     clear: both;
     background-color: #4e3629;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #fffbef;
     text-align: center;
+    height: 100px;
+    box-sizing: border-box;
     padding: 20px;
 }
