@@ -9,7 +9,7 @@ section .two{
 }
 
 section .two h1{
-    font-size: 50px;
+    font-size: 55px;
 }
 
 section .one p{
@@ -18,5 +18,7 @@ section .one p{
 
 #contact{
     margin-top: 110px;
+    box-sizing: border-box;
+    height: calc(100vh - 100px - 110px);
     padding: 25px;
 }
