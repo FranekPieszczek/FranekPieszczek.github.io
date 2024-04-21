@@ -4,6 +4,7 @@ body {
     background-color: #fffbef; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:#333;
+    overflow-x: hidden;
 }
 
 .header-fixed {
@@ -19,15 +20,6 @@ body {
     padding: 0px 20px 0px 20px;
     user-select: none;
     box-shadow: 0 0 50px -30px #4e3629; 
-}
-
-#heading-container{
-    background-color: #4e3629;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    min-height: calc(110px * 1.618);
 }
 
 /* .logo-title *{
@@ -189,6 +181,14 @@ body {
     }
 }
 
+@media screen and (max-width: 570px) {
+    
+    .header-fixed{
+        height: fit-content;
+    }
+
+}
+
 header .logo-title{
     float: left;
 }
@@ -251,6 +251,7 @@ header hr{
     /* background-color:#fffbef; */
     background-color: rgba(255, 251, 239, 0.97);
     transition: 50ms ease-in-out;
+    z-index: 10;
 }
 
 .header-fixed .main-nav > ul > li .nav-link:hover ~ .site-nav,
