@@ -1,24 +1,64 @@
 h1{
     font-size: 30px;
 }
+
 section .two{
     display: flex;
     justify-content: center;
     align-items: center; 
+    box-sizing: border-box;
+    padding: 50px 50px 50px 25px;
     border-right: 2px solid #4e3629;
 }
 
-section .two h1{
-    font-size: 55px;
-}
-
-section .one p{
-    text-align: left;
-}
-
 #contact{
-    margin-top: 110px;
     box-sizing: border-box;
     height: calc(100vh - 100px - 110px);
     padding: 25px;
 }
+
+@media screen and (min-width: 1021px){
+    #contact{
+        margin-top: 110px;
+    }
+}
+
+@media screen and (max-width: 1020px){
+    #contact{
+        margin-top: 138px;
+    }
+}
+
+@media screen and (min-width: 801px){
+    section .two{
+        border-right: 2px solid #4e3629;
+    }
+
+    section .one p{
+        text-align: left;
+    }
+
+    section .two h1{
+        font-size: 55px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    section .two{
+        border-right: 0px;
+        border-bottom: 2px solid #4e3629;
+        text-align: center;
+    }
+
+    section .two h1{
+        font-size: 45px;
+    }
+
+    section .one p{
+        text-align: center;
+    }
+}
+
+
+
+

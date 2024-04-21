@@ -1,23 +1,23 @@
+:root {
+    --image-size-normal: 250px;
+    --image-size-small: 100px;
+}
+
 .gallery{
     border: 2px solid #333;
     box-shadow: 0 0 50px -30px #4e3629; 
     box-sizing: border-box;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 50px;
     justify-content: center;
     min-height: 495px;
     height: fit-content;
-    width: calc(100vw - 200px);
-    border-radius: 20px;
     padding: 50px;
     margin: 75px 100px 50px 100px;
     /* background-color: aqua; */
 }
 
 .gallery .gallery-item{
-    min-height: 150px;
-    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,8 +26,7 @@
 
 .gallery .gallery-item img{
     box-shadow: 0 0 50px -30px #4e3629; 
-    height: 150px;
-    width: 150px;
+    border-radius: 10px;
     transition: 50ms ease-in-out;
     transform: scale(1);
     object-fit: cover;
@@ -37,11 +36,73 @@
 .gallery .gallery-item img:hover{
     box-shadow: 0 0 75px -20px #4e3629; 
     transform: scale(1.05);
+    border-radius: 0px;
     /* height: 160px; */
 }
 
 h1{
     text-align: center;
     font-size: 50px;
-    margin-top: 175px;
+}
+
+@media screen and (max-width: 1020px){
+
+    h1{
+        margin-top: 203px;
+    }
+
+}
+
+@media screen and (min-width: 1021px){
+
+    h1{
+        margin-top: 175px;
+    }
+
+}
+
+@media screen and (min-width: 571px) {
+
+    .gallery{
+        width: calc(100vw - 200px);
+        margin: 75px 100px 50px 100px;
+        border-radius: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(var(--image-size-normal), 1fr));
+    }
+
+    .gallery .gallery-item{
+        min-height: auto;
+        width: 100%;
+    }
+    
+    .gallery .gallery-item img{
+        height: var(--image-size-normal);
+        width: var(--image-size-normal);
+    }
+    
+}
+
+@media screen and (max-width: 570px) {
+
+    h1{
+        margin-top: 250px
+    }
+
+    .gallery{
+        margin: 75px 0px 50px 0px;
+        border-right: 0px;
+        border-left: 0px;
+        grid-template-columns: repeat(auto-fill, minmax(var(--image-size-small), 1fr));
+    }
+
+    .gallery .gallery-item{
+        min-height: auto;
+        width: 100%;
+    }
+    
+    .gallery .gallery-item img{
+        height: var(--image-size-small);
+        width: var(--image-size-small);
+    }
+
 }

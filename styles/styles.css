@@ -4,7 +4,12 @@ body {
     background-color: #fffbef; 
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color:#333;
+    user-select: none;
     overflow-x: hidden;
+}
+
+.heading1{
+    font-family: "Raleway", sans-serif;
 }
 
 .header-fixed {
@@ -182,7 +187,7 @@ body {
 }
 
 @media screen and (max-width: 570px) {
-    
+
     .header-fixed{
         height: fit-content;
     }

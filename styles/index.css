@@ -5,9 +5,9 @@
 #heading-container{
     background-color: #4e3629;
     background-image: url("../images/headingBG.jpg");
-    background-size: cover; /* Adjust as needed */
+    background-size: cover; 
+    background-position: center top -10px; 
     object-fit: cover;
-    background-position: center top -10px; /* Adjust as needed */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -126,13 +126,13 @@
         order: 1;
         width: 100vw;
         /* flex: 1; */
-        height: calc(100% - (100% / 1.618));
+        height: calc(100% - (100% / 1.618)); 
     }
 }
 
 @media screen and (min-width: 801px){
     section{
-        padding: 150px 0px 0px 0px;
+        padding: 175px 0px 50px 0px;
     }
     section .one{
         box-sizing: border-box;
@@ -154,12 +154,14 @@
     section.left .test{
         border-top-left-radius: var(--image-rounding);
         border-bottom-left-radius: var(--image-rounding);
+        box-shadow: 0 0 50px -10px #4e3629;
         transition: 200ms ease-in-out;
     }
     
     section.right .test{
         border-top-right-radius: var(--image-rounding);
         border-bottom-right-radius: var(--image-rounding);
+        box-shadow: 0 0 50px -10px #4e3629;
         transition: 200ms ease-in-out;
     }
     
@@ -192,6 +194,12 @@
         padding-top: 96px;
     }
 
+}
+
+@media screen and (max-width: 1200px){
+    #heading-container{
+        background-position: center;
+    }
 }
 
 section h2{
