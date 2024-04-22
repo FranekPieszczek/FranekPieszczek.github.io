@@ -8,13 +8,13 @@ h1{
 }
 
 #AboutMe{
-    margin: 50px auto 60px;
+    margin: 50px auto 110px;
     width: fit-content;
     height: fit-content;
 
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 #AboutMe img{
