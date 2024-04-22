@@ -320,10 +320,10 @@ header .main-nav, header .secondary-nav {
     /* padding: 0 10px; */
 }
 
-nav ul li {
+.main-nav ul li {
     display: inline;
     height: fit-content;
-    text-align: center;
+    /* text-align: center; */
     /* margin: 0 0px 0 10px; */
     
 }
