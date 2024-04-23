@@ -1,0 +1,13 @@
+#eq-header{
+    text-align: center;
+    margin-top: 150px;
+    padding: 0 20px;
+}
+
+@media screen and (max-width: 570px) {
+
+    #eq-header{
+        margin-top: 250px;
+    }
+
+}
