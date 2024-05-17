@@ -1,0 +1,26 @@
+.asterisk{
+    color: red;
+}
+
+#formu{
+    margin-top: 138px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
+label{
+    margin: 5px;
+}
+
+.normal_input{
+    margin: 5px 5px 15px 5px;
+    height: 20px;
+    border-radius: 5px;
+    border: 0px;
+    outline: 2px solid  #333;
+}
+
+#send{
+    margin: 5px;
+}

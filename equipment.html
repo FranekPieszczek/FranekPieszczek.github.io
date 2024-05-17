@@ -6,10 +6,12 @@
         <title>Stronka o Kawie - Formularz</title>
         <link rel="icon" href="images/logo2.png" type="image/icon type"> 
         <link rel="stylesheet" href="styles/styles.css">
+        <link rel="stylesheet" href="styles/equipment.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="scripts/form.js"></script>
     </head>
     <body>
         <header class="header-fixed">
@@ -57,5 +59,25 @@
             <hr>
         </header>
     
+        <form action="" method="post" id="formu">
+
+            <label id="">Nazwa Użytkownika<span class="asterisk" id="username_err">*</span></label><br>
+            <input type="text" id="username" class="normal_input"><br>
+
+            <label id="">E-mail<span class="asterisk" id="email_err">*</span></label><br>
+            <input type="text" id="email" class="normal_input"><br>
+
+            <label id="">Hasło<span class="asterisk" id="password_err">*</span></label><br>
+            <input type="text" id="password" class="normal_input"><br>
+
+            <label id="">Imię</label><br>
+            <input type="text" id="first_name" class="normal_input"><br>
+
+            <label id="">Nazwisko</label><br>
+            <input type="text" id="last_name" class="normal_input"><br>
+            
+            <input type="button" value="Wyślij" id="send" onclick="validate()">
+            
+        </form>
     </body>
 </html>
