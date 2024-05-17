@@ -343,7 +343,6 @@ header .main-nav, header .secondary-nav {
     transform: rotate(180deg);
 }
 
-
 .secondary-nav ul li .nav-link, .main-nav > ul > li .nav-link{
     color: #333;
     display: flex;
