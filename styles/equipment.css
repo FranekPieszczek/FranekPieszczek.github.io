@@ -1,9 +1,9 @@
-.asterisk{
+/* .asterisk{
     color: red;
 }
 
 #formu{
-    margin-top: 138px;
+    
     margin-left: auto;
     margin-right: auto;
     width: 500px;
@@ -23,4 +23,50 @@ label{
 
 #send{
     margin: 5px;
-}
+} */
+
+/* Style the form itself */
+
+#formu {
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    margin: 138px auto; 
+    padding: 20px;
+    border: 0px solid #333;
+    border-radius: 5px;
+  }
+
+  label {
+    display: block; 
+    margin: 15px 0 5px;
+    font-weight: bold;
+  }
+
+  .asterisk {
+    color: red;
+  }
+
+  .normal_input {
+    width: 100%;
+    height: 35px;
+    padding: 8px;
+    border: 1px solid #b3b3b3;
+    border-radius: 3px;
+    box-sizing: border-box; 
+  }
+
+  #send {
+    background-color: #A47854;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: background-color 0.05s ease;
+  }
+
+  #send:hover {
+    background-color: #8C5C3A; 
+  }

@@ -65,13 +65,13 @@
         <form action="" method="post" id="formu">
 
             <label id="">Nazwa Użytkownika<span class="asterisk" id="username_err">*</span></label><br>
-            <input type="text" id="username" class="normal_input"><br>
+            <input type="text" id="username" class="normal_input" placeholder=""><br>
 
             <label id="">E-mail<span class="asterisk" id="email_err">*</span></label><br>
-            <input type="text" id="email" class="normal_input"><br>
+            <input type="text" id="email" class="normal_input" placeholder="example@gmail.com"><br>
 
             <label id="">Hasło<span class="asterisk" id="password_err">*</span></label><br>
-            <input type="text" id="password" class="normal_input"><br>
+            <input type="text" id="password" class="normal_input" placeholder="min. 12 znaków, liczba oraz znak specjalny"><br>
 
             <label id="">Imię</label><br>
             <input type="text" id="first_name" class="normal_input"><br>
@@ -80,6 +80,8 @@
             <input type="text" id="last_name" class="normal_input"><br>
             
             <input type="button" value="Wyślij" id="send" onclick="validate()">
+
+            <p style="margin-bottom: 0px"><span class="asterisk">*</span> - Pola wymagane</p>
             
         </form>
     </body>
