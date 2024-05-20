@@ -64,25 +64,64 @@
 
         <form action="" method="post" id="formu">
 
-            <label id="">Nazwa Użytkownika<span class="asterisk" id="username_err">*</span></label><br>
-            <input type="text" id="username" class="normal_input" placeholder=""><br>
+            <label id="">Nazwa Użytkownika <span class="asterisk" id="username_err">*</span></label><br>
+            <input type="text" id="username" class="normal_input" placeholder="min. 3 znaki, brak znaków specjalnych"><br>
 
-            <label id="">E-mail<span class="asterisk" id="email_err">*</span></label><br>
+            <label id="">E-mail <span class="asterisk" id="email_err">*</span></label><br>
             <input type="text" id="email" class="normal_input" placeholder="example@gmail.com"><br>
 
-            <label id="">Hasło<span class="asterisk" id="password_err">*</span></label><br>
+            <label id="">Hasło <span class="asterisk" id="password_err">*</span></label><br>
             <input type="text" id="password" class="normal_input" placeholder="min. 12 znaków, liczba oraz znak specjalny"><br>
 
-            <label id="">Imię</label><br>
+            <label id="">Imię </label><br>
             <input type="text" id="first_name" class="normal_input"><br>
 
-            <label id="">Nazwisko</label><br>
+            <label id="">Nazwisko </label><br>
             <input type="text" id="last_name" class="normal_input"><br>
+
+            <Label id="">Radio <span class="asterisk" id="radio_err">*</span></Label><br>
+            <table class="form_table">
+                <tr>
+                    <td>
+                        <input type="radio" class="radio_class" name="costam" value="Tak"> Tak<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" class="radio_class" name="costam" value="Nie"> Nie<br>
+                    </td>
+                </tr>
+            </table>
+
+            <Label id="">Checkbox <span class="asterisk" id="checkbox_err">*</span></Label><br>
+            <table class="form_table">
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_1"> Opcja 1<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_2"> Opcja 2<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_3"> Opcja 3<br>
+                    </td>
+                </tr>
+            </table>
             
             <input type="button" value="Wyślij" id="send" onclick="validate()">
 
             <p style="margin-bottom: 0px"><span class="asterisk">*</span> - Pola wymagane</p>
             
         </form>
+
+        <script>
+            window.addEventListener('load', function() {
+                document.getElementById('formu').reset();
+            });
+        </script>
     </body>
 </html>
