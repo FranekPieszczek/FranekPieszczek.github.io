@@ -3,26 +3,29 @@ function validate(){
     let username = document.getElementById("username").value;
     let email = document.getElementById("email").value;
     let password = document.getElementById("password").value;
+    let fname = document.getElementById("first_name").value;
+    let lname = document.getElementById("last_name").value;
 
-    const radioButtons = document.querySelectorAll('input[name="costam"]');
+    let radioButtons = document.querySelectorAll('input[name="costam"]');
     let selectedValue = null;
-    for (const radioButton of radioButtons) {
+    for (let radioButton of radioButtons) {
         if (radioButton.checked) {
             selectedValue = radioButton.value;
             break;
         }
     }
 
-    const checkboxes = document.querySelectorAll('input[name="checkboxy"]');
+    let checkboxes = document.querySelectorAll('input[name="checkboxy"]');
     let selectedValues = [];
-    for (const checkbox of checkboxes) {
+    for (let checkbox of checkboxes) {
         if (checkbox.checked) {
             selectedValues.push(checkbox.value);
         }
     }
 
-    const r_username = /[a-zA-Z0-9]{3,}/g;
+    const r_username = /^[a-zA-Z0-9]{3,}$/;
     const r_password = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/;
+    const r_names = /^[a-zA-Z]+$/;
 
     let username_check = r_username.test(username);
     let password_check = r_password.test(password);
@@ -70,9 +73,19 @@ function validate(){
     //checking checkboxes
     if(selectedValues.length == 0){
         isValid = false;
-        document.getElementById("checkbox_err").innerHTML="*<br>Wybierz przyajmniej jedną opcję";
+        document.getElementById("checkbox_err").innerHTML="*<br>Wybierz przynajmniej jedną opcję";
     }
 
     if(!isValid) return;
 
+    display_results(username, email, password, fname, lname, selectedValue, selectedValues  );
+
+}
+
+function display_results(username, email, password, fname, lname, radioValue, checkboxValues){
+    let content = "<dl><dt>Nazwa użytkownika</dt><dd>" + username + "</dd><br>"
+    + "<dt>Email</dt><dd>" + email + "</dd>";
+        
+    document.getElementById("form_results").innerHTML = content;
+    document.getElementById("form_results").style.display = "block";
 }
