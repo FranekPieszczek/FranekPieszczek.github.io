@@ -61,17 +61,23 @@
         </header>
 
         <!-- <h1 id="eq-header">Popularne przyrządy do parzenia kawy</h1> -->
+        <div id="results_container">
+            <div id="form_results">
+
+            </div>
+        </div>
+        
 
         <form action="" method="post" id="formu">
 
             <label id="">Nazwa Użytkownika <span class="asterisk" id="username_err">*</span></label><br>
-            <input type="text" id="username" class="normal_input" placeholder="min. 3 znaki, brak znaków specjalnych"><br>
+            <input value="AAAaaa" type="text" id="username" class="normal_input" placeholder="min. 3 znaki, brak znaków specjalnych"><br>
 
             <label id="">E-mail <span class="asterisk" id="email_err">*</span></label><br>
-            <input type="text" id="email" class="normal_input" placeholder="example@gmail.com"><br>
+            <input value="AAAaaa" type="text" id="email" class="normal_input" placeholder="example@gmail.com"><br>
 
             <label id="">Hasło <span class="asterisk" id="password_err">*</span></label><br>
-            <input type="text" id="password" class="normal_input" placeholder="min. 12 znaków, liczba oraz znak specjalny"><br>
+            <input value="AAAaaaaa1112121!!!!" type="text" id="password" class="normal_input" placeholder="min. 12 znaków, liczba oraz znak specjalny"><br>
 
             <label id="">Imię </label><br>
             <input type="text" id="first_name" class="normal_input"><br>
@@ -83,7 +89,7 @@
             <table class="form_table">
                 <tr>
                     <td>
-                        <input type="radio" class="radio_class" name="costam" value="Tak"> Tak<br>
+                        <input type="radio" class="radio_class" name="costam" value="Tak" checked> Tak<br>
                     </td>
                 </tr>
                 <tr>
@@ -97,17 +103,17 @@
             <table class="form_table">
                 <tr>
                     <td>
-                        <input type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_1"> Opcja 1<br>
+                        <input value="opcja1" type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_1" checked> Opcja 1<br>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_2"> Opcja 2<br>
+                        <input value="opcja2" type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_2"> Opcja 2<br>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_3"> Opcja 3<br>
+                        <input value="opcja3" type="checkbox" name="checkboxy" class="checkbox_class" id="checkbox_3"> Opcja 3<br>
                     </td>
                 </tr>
             </table>
@@ -118,9 +124,7 @@
             
         </form>
 
-        <div id="form_results">
-
-        </div>
+        
 
         <script>
             window.addEventListener('load', function() {

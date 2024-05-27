@@ -83,9 +83,26 @@ function validate(){
 }
 
 function display_results(username, email, password, fname, lname, radioValue, checkboxValues){
-    let content = "<dl><dt>Nazwa użytkownika</dt><dd>" + username + "</dd><br>"
-    + "<dt>Email</dt><dd>" + email + "</dd>";
+    let content = "<dl><dt>Nazwa użytkownika</dt><dd>" + username + "</dd>"
+    + "<dt>Email</dt><dd>" + email + "</dd>"
+    + "<dt>Hasło</dt><dd>" + password + "</dd>";
+
+    if(fname != "") content += "<dt>Imię</dt><dd>" + fname + "</dd>";
+    if(lname != "") content += "<dt>Nazwisko</dt><dd>" + lname + "</dd>";
+
+    content += "<dt>Radio</dt><dd>" + radioValue + "</dd>";
+
+    content += "<dt>Checkboxy</dt>";
+    for(let c of checkboxValues){
+        content += "<dd>" + c + "</dd>";
+    }
+
+    content += "<input type=\"button\" value=\"Zamknij\" id=\"hide\" onclick=\"hide_results()\">"
         
     document.getElementById("form_results").innerHTML = content;
-    document.getElementById("form_results").style.display = "block";
+    document.getElementById("results_container").style.display = "flex";
+}
+
+function hide_results() {
+    document.getElementById("results_container").style.display = "none";
 }
