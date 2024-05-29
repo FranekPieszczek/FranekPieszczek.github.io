@@ -1,4 +1,5 @@
 
+// Walidacja danych
 function validate(){
     let username = document.getElementById("username").value;
     let email = document.getElementById("email").value;
@@ -7,10 +8,10 @@ function validate(){
     let lname = document.getElementById("last_name").value;
 
     let radioButtons = document.querySelectorAll('input[name="costam"]');
-    let selectedValue = null;
+    let radioValue = null;
     for (let radioButton of radioButtons) {
         if (radioButton.checked) {
-            selectedValue = radioButton.value;
+            radioValue = radioButton.value;
             break;
         }
     }
@@ -23,12 +24,13 @@ function validate(){
         }
     }
 
-    const r_username = /^[a-zA-Z0-9]{3,}$/;
+    const r_username = /^[a-zA-Z0-9żźćńółęąśŻŹĆĄŚĘŁÓ]{3,}$/;
     const r_password = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{12,}$/;
-    const r_names = /^[a-zA-Z]+$/;
+    const r_names = /^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓ]+$/;
 
     let username_check = r_username.test(username);
     let password_check = r_password.test(password);
+    //let fname_check = r_names.test(fname);
 
     let isValid = true;
 
@@ -65,7 +67,7 @@ function validate(){
     }
 
     //checking radio buttons
-    if(!selectedValue){
+    if(!radioValue){
         isValid = false;
         document.getElementById("radio_err").innerHTML="*<br>Wybierz jedną z opcji";
     }
@@ -78,31 +80,40 @@ function validate(){
 
     if(!isValid) return;
 
-    display_results(username, email, password, fname, lname, selectedValue, selectedValues  );
-
+    display_results(username, email, password, fname, lname, radioValue, selectedValues);
 }
 
+// Pokazanie wyników
 function display_results(username, email, password, fname, lname, radioValue, checkboxValues){
+
+    // Wyświetlanie wymaganych pól
     let content = "<dl><dt>Nazwa użytkownika</dt><dd>" + username + "</dd>"
     + "<dt>Email</dt><dd>" + email + "</dd>"
     + "<dt>Hasło</dt><dd>" + password + "</dd>";
 
+    // Wyświetlanie imienia i nazwiska, jeżeli zostały podane
     if(fname != "") content += "<dt>Imię</dt><dd>" + fname + "</dd>";
     if(lname != "") content += "<dt>Nazwisko</dt><dd>" + lname + "</dd>";
 
+    // Wartość radio
     content += "<dt>Radio</dt><dd>" + radioValue + "</dd>";
 
+    // Wartości Checkboxów
     content += "<dt>Checkboxy</dt>";
     for(let c of checkboxValues){
         content += "<dd>" + c + "</dd>";
     }
 
+    // Guzik do zamknięcia
     content += "<input type=\"button\" value=\"Zamknij\" id=\"hide\" onclick=\"hide_results()\">"
-        
+    
+
     document.getElementById("form_results").innerHTML = content;
-    document.getElementById("results_container").style.display = "flex";
+    document.getElementById("results_container").style.display = "block";
 }
 
+
+// Schowanie wprowadzonych danych
 function hide_results() {
     document.getElementById("results_container").style.display = "none";
 }
